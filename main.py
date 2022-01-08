@@ -81,4 +81,5 @@ server_thread.start()
 if __name__ == "__main__":
     # server_thread = Thread(target=server.run, kwargs={'host': '0.0.0.0', 'port': PORT, 'debug': False})
     # server_thread.start()
+    from waitress import serve
     server.run(debug=False, port=PORT, host='0.0.0.0')
