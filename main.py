@@ -2,6 +2,8 @@ from flask import Flask, request, render_template
 import queue
 import ast
 
+from config import PORT
+
 app = Flask(__name__)
 
 data_queue = dict()
@@ -37,4 +39,4 @@ def alert():
         return 'OK', 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8123, debug=True)
+    app.run(host='0.0.0.0', port=PORT, debug=True)
