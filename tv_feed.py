@@ -53,7 +53,7 @@ class TVFeed(DataBase):
     def __init__(self, config={}, retries=5):
 
         global data_queue
-        from .server import data_queue
+        from .main import data_queue
 
         self._data = deque() # data queue for price data
 
